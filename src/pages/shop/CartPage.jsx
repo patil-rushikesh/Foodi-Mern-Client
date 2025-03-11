@@ -21,7 +21,7 @@ const CartPage = () => {
 
     const handleDecrease = (item) => {
         if (item.quantity > 1) {
-            fetch(`http://localhost:3000/carts/${item._id}`, {
+            fetch(`https://foodi-mern-server.onrender.com/carts/${item._id}`, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json; charset=UTF-8"
@@ -46,7 +46,7 @@ const CartPage = () => {
     };
 
     const handleIncrease = (item) => {
-        fetch(`http://localhost:3000/carts/${item._id}`, {
+        fetch(`https://foodi-mern-server.onrender.com/carts/${item._id}`, {
             method: "PUT",
             headers: {
                 "Content-type": "application/json; charset=UTF-8"
@@ -85,7 +85,7 @@ const CartPage = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:3000/carts/${item._id}`, {
+                fetch(`https://foodi-mern-server.onrender.com/carts/${item._id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

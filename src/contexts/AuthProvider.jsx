@@ -49,7 +49,7 @@ const AuthProvider = ({ children }) => {
       setUser(currentUser);
       if (currentUser) {
         const userInfo = { email: currentUser.email }
-        axios.post('http://localhost:3000/jwt', 
+        axios.post('https://foodi-mern-server.onrender.com/jwt', 
           userInfo
         ).then(
           (res) => {

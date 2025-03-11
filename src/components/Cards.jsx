@@ -17,7 +17,7 @@ const Cards = ({ item }) => {
   const handleAddtoCart = (item) => {
     if (user && user?.email) {
       const cartItem = { menuItemId: _id, name, quantity: 1, image, price, email: user.email };
-      fetch('http://localhost:3000/carts', {
+      fetch('https://foodi-mern-server.onrender.com/carts', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
