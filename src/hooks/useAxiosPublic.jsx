@@ -3,7 +3,7 @@ import axios from "axios";
 import React from 'react'
 
 const axiosPublic = axios.create({
-    baseURL: 'http://localhost:3000',
+    baseURL: 'https://foodi-mern-server.onrender.com',
 })
 const useAxiosPublic = () => {
     return axiosPublic
