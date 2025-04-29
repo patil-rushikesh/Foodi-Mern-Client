@@ -38,7 +38,8 @@ const router = createBrowserRouter([
             },{
                 path:"/process-checkout",
                 element: <Payment/>
-            }
+            },
+            { path: "*", element: <Navigate to="/" replace /> }
         ]
     },
 
@@ -71,7 +72,8 @@ const router = createBrowserRouter([
                 path: "update-menu/:id",
                 element: <UpdateMenu />,
                 loader: ({params}) => fetch(`https://foodi-mern-server.onrender.com/menu/${params.id}`)
-            }
+            },
+            { path: "*", element: <Navigate to="/" replace /> }
         ]
     }
 ]);
