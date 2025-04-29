@@ -13,7 +13,7 @@ import AddMenu from "../pages/dashboard/admin/AddMenu";
 import ManageItems from "../pages/dashboard/admin/ManageItems";
 import UpdateMenu from "../pages/dashboard/admin/UpdateMenu";
 import Payment from "../pages/shop/Payment";
-
+import { Navigate } from "react-router-dom";
 const router = createBrowserRouter([
     //user
     {
